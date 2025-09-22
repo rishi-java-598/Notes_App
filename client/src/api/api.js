@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://notes-app-6-bc3x.onrender.com/api";
 
 export const request = async (path, options = {}) => {
   const token = localStorage.getItem("token");
