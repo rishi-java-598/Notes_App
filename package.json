@@ -3,20 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node server/server.js",
+    "install": "cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build",
+    "start": "cd server && node server.js",
     "server": "cd server && npm start",
     "client": "cd client && npm start",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "dependencies": {
-    "bcrypt": "^5.1.1",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.19.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.5.0"
-  },
-  "engines": {
-    "node": "22.x"
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
