@@ -4,10 +4,10 @@
   "description": "Node + Express + MongoDB Notes app backend (JWT auth, MVC) - ESM",
   "type": "module",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
-  },
+ "scripts": {
+  "start": "node server/server.js",
+  "heroku-postbuild": "cd client && npm install && npm run build"
+},
   "keywords": [],
   "author": "",
   "license": "MIT",
