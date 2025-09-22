@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111827;
+  padding: 1rem 2rem;
+  border-radius:  40px ;
+
+
+}
+
+.logo {
+  color: #f9fafb;
+}
+
+#loginButton{
+    color:black;
+    background: white;
+    border-radius: 20px;
+    padding :10px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+#logout{
+    color: black;
+    background: white;
+    border-radius: 20px;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
