@@ -20,7 +20,7 @@ app.use("/api/notes", noteRoutes);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-if (process.env.NODE_ENV === "production") {
+// if (process.env.NODE_ENV === "production") {
 
 app.use(express.static(path.join(__dirname, "../client/dist"))); // CRA uses 'build'
 
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, "../client/dist"))); // CRA uses 'bu
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 });
-}
+// }
 
 app.use(notFound);
 app.use(errorHandler);
